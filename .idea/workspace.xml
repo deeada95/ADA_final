@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49651a0b-0090-4921-a5b9-6d69c4a40027" name="Changes" comment="creare modele si superuser">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="49651a0b-0090-4921-a5b9-6d69c4a40027" name="Changes" comment="adaugare pagini">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/farmacie_online/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/farmacie_online/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,12 +100,29 @@
       <option name="project" value="LOCAL" />
       <updated>1738004660022</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adaugare pagini">
+      <option name="closed" value="true" />
+      <created>1738094336061</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738094336061</updated>
+    </task>
+    <task id="LOCAL-00006" summary="adaugare pagini">
+      <option name="closed" value="true" />
+      <created>1738094350792</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738094350792</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creare proiect" />
     <MESSAGE value="creare modele si superuser" />
-    <option name="LAST_COMMIT_MESSAGE" value="creare modele si superuser" />
+    <MESSAGE value="adaugare pagini" />
+    <option name="LAST_COMMIT_MESSAGE" value="adaugare pagini" />
   </component>
 </project>

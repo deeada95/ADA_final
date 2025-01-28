@@ -6,6 +6,9 @@ from produs.models import Produs
 
 def index(request):
     return render(request, 'home.html')
+def produse(request):
+    produse = Produs.objects.all()
+    return render(request, 'produse.html', {'produse': produse})
 def despre_noi(request):
     return render(request, 'despre_noi.html')
 def program_contact(request):

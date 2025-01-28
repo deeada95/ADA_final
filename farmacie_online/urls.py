@@ -23,6 +23,7 @@ from produs.views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name = 'home'),
+    path('produse/', views.produse, name='produse'),
     path('despre noi/', views.despre_noi, name='despre_noi'),
     path('program-contact/', views.program_contact, name='program_contact')
 ]

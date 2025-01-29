@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Produse disponibile</h1>
+<div class="product-list">
+    {% for produs in produse %}
+        <div class="product-item">
+            <h3>{{ produs.nume }}</h3>
+            <p>{{ produs.descriere }}</p>
+            <p>Preț: {{ produs.pret }} RON</p>
+            <p>Categorie: {{ produs.category.name }}</p>
+            {% if produs.imagine %}
+                <img src="{{ produs.imagine.url }}" alt="{{ produs.nume }}" width="200">
+            {% else %}
+                <p>Imagine nu este disponibilă</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

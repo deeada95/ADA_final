@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49651a0b-0090-4921-a5b9-6d69c4a40027" name="Changes" comment="adaugare pagini" />
+    <list default="true" id="49651a0b-0090-4921-a5b9-6d69c4a40027" name="Changes" comment="adaugare pagini">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/farmacie_online/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/farmacie_online/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/farmacie_online/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/farmacie_online/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +57,7 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/AND/Desktop/final-template-master&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
@@ -130,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738095377820</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="adaugare pagini">
+      <option name="closed" value="true" />
+      <created>1738098513564</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738098513564</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

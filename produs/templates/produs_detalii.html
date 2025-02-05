@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="product-detail">
+        <h1>{{ produs.nume }}</h1>
+        <p>{{ produs.descriere }}</p>
+        <p><strong>Preț:</strong> {{ produs.pret }} RON</p>
+        <p><strong>Categorie:</strong> {{ produs.category.name }}</p>
+
+        <div class="product-images">
+        {% if imagini_produs %}
+            <div class="image-slider">
+                <div class="slider-wrapper">
+                    {% for imagine in imagini_produs %}
+                        <div class="slide">
+                            <img src="{{ imagine.imagine.url }}" alt="Imagine suplimentară {{ produs.nume }}" width="200">
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% else %}
+            <p>Nu sunt imagini suplimentare pentru acest produs.</p>
+        {% endif %}
+    </div>
+
+    <p><a href="/produse/">Înapoi la produse</a></p>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.slider-wrapper').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: true
+            });
+        });
+    </script>
+{% endblock %}

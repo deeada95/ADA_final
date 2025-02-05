@@ -1,3 +1,13 @@
 body {
     background-color: #392F5A;
 }
+
+.product-images {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.slick-slide img {
+    width: 100%;
+    height: auto;
+}

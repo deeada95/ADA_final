@@ -19,17 +19,11 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from produs import views
-from produs.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name = 'home'),
-    path('produse/', views.produse, name='produse'),
-    path('despre noi/', views.despre_noi, name='despre_noi'),
-    path('program-contact/', views.program_contact, name='program_contact'),
-    path('register/', views.register, name='register'),
-    path('signin/', views.signin, name='signin')
+    path('accounts/', include('accounts.urls')),
+    path('', include('produs.urls'))
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:

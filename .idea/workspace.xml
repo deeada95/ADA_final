@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49651a0b-0090-4921-a5b9-6d69c4a40027" name="Changes" comment="adaugare pagini">
+    <list default="true" id="49651a0b-0090-4921-a5b9-6d69c4a40027" name="Changes" comment="adaugare formular de inregistrare si autentificare. creare folder media, pentru salvarea imaginilor pe care le adaug din pagina admin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/farmacie_online/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/farmacie_online/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/farmacie_online/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/farmacie_online/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/forms.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/produs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/static/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/produs/static/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/produs/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/templates/produse.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/produse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/templates/signin.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/produs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,13 +153,30 @@
       <option name="project" value="LOCAL" />
       <updated>1738098513564</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="adaugare formular de inregistrare si autentificare. creare folder media, pentru salvarea imaginilor pe care le adaug din pagina admin">
+      <option name="closed" value="true" />
+      <created>1738178919275</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738178919275</updated>
+    </task>
+    <task id="LOCAL-00011" summary="adaugare formular de inregistrare si autentificare. creare folder media, pentru salvarea imaginilor pe care le adaug din pagina admin">
+      <option name="closed" value="true" />
+      <created>1738178924230</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1738178924231</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creare proiect" />
     <MESSAGE value="creare modele si superuser" />
     <MESSAGE value="adaugare pagini" />
-    <option name="LAST_COMMIT_MESSAGE" value="adaugare pagini" />
+    <MESSAGE value="adaugare formular de inregistrare si autentificare. creare folder media, pentru salvarea imaginilor pe care le adaug din pagina admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="adaugare formular de inregistrare si autentificare. creare folder media, pentru salvarea imaginilor pe care le adaug din pagina admin" />
   </component>
 </project>

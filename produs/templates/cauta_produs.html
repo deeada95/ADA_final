@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Rezultatele căutării pentru "{{ query }}"</h2>
+
+    {% if produse %}
+        <div class="product-list">
+            {% for produs in produse %}
+                <div class="product-item">
+                    <h3><a href="{% url 'produs_detalii' produs.id %}">{{ produs.nume }}</a></h3>
+                    <p>{{ produs.descriere }}</p>
+                    <p>Preț: {{ produs.pret }} RON</p>
+                    {% if produs.imagine %}
+                        <img src="{{ produs.imagine.url }}" alt="{{ produs.nume }}" width="150">
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>Nu s-au găsit produse pentru această căutare.</p>
+    {% endif %}
+{% endblock %}

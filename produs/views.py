@@ -1,13 +1,29 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, TemplateView
+
+from .forms import FilterProductsForm
 from .models import Produs
 
 def index(request):
     return render(request, 'home.html')
+
 class ProduseView(ListView):
     model = Produs
     template_name = 'produse.html'
     context_object_name = 'produse'
+    paginate_by = 5
+    def get_queryset(self):
+        categorie_filtru = self.request.GET.get('categorie')
+        queryset = Produs.objects.all()
+        if categorie_filtru:
+            queryset = queryset.filter(category_id = categorie_filtru)
+
+        return queryset
+
+    def get_context_data(self):
+        context = super().get_context_data()
+        context['form'] = FilterProductsForm(self.request.GET)
+        return context
 
 class DespreNoi(TemplateView):
     template_name = 'despre_noi.html'

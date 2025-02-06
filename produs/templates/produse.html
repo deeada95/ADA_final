@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="filter-form">
+    <form method="get">
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Filtrează</button>
+    </form>
+</div>
+
 <div class="product-list">
     {% for produs in produse %}
         <div class="product-item">
@@ -8,6 +15,7 @@
             <p>{{ produs.descriere }}</p>
             <p>Preț: {{ produs.pret }} RON</p>
             <p>Categorie: {{ produs.category.name }}</p>
+
             {% if produs.imagine %}
                 <img src="{{ produs.imagine.url }}" alt="{{ produs.nume }}" width="200">
             {% else %}

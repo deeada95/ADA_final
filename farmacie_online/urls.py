@@ -17,13 +17,25 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
-
+from django.contrib.auth.views import LogoutView
+from django.urls import path
+from django.views.generic import TemplateView
+from accounts.views import CustomLoginView, CustomPasswordChangeView, SignUpView
+from produs import views
+from produs.views import index, ProduseView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
-    path('', include('produs.urls'))
+    path('', index, name = 'home'),
+    path('produse/', ProduseView.as_view(), name='produse'),
+    path('produs/<int:produs_id>/', views.produs_detalii, name='produs_detalii'),
+    path('despre noi/', TemplateView.as_view(template_name='despre_noi.html'), name='despre_noi'),
+    path('program-contact/', TemplateView.as_view(template_name='program_contact.html'), name='program_contact'),
+    path('cauta_produs/', views.cauta_produs, name='cauta_produs'),
+    path('login/', CustomLoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
+    path('schimbare_parola', CustomPasswordChangeView.as_view(), name='schimbare_parola'),
+    path('signup/', SignUpView.as_view(), name='signup'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:

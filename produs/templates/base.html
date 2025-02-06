@@ -29,6 +29,11 @@
         <a class="navbar-brand" href="{% url 'despre_noi' %}">Despre Noi</a>
         <a class="navbar-brand" href="{% url 'program_contact' %}">Contact</a>
         <a class="navbar-brand" href="{% url 'produse' %}">Produse</a>
+        <a class="navbar-brand" href="{% url 'cauta_produs' %}"></a>
+            <form action="{% url 'cauta_produs' %}" method="GET">
+                <input type="text" name="q" placeholder="Cauta un produs..." value="{{ query }}">
+                <button type="submit">Cauta</button>
+            </form>
 
         <button
             class="navbar-toggler" type="button"
@@ -58,6 +63,7 @@
 
     </div>
 </nav>
+
 <div class="container">
     <div class="jumbotron">
         {% block content %}{% endblock %}

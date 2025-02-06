@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49651a0b-0090-4921-a5b9-6d69c4a40027" name="Changes" comment="adaugare optiune creare cont, autentificare, schimbare parola. creare pagina detalii produs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/templates/produse.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/produse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738788557931</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="adaugare optiune creare cont, autentificare, schimbare parola. creare pagina detalii produs">
+      <option name="closed" value="true" />
+      <created>1738788837970</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1738788837970</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

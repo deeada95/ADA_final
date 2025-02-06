@@ -23,3 +23,12 @@ def produs_detalii(request, produs_id):
         'imagini_produs': imagini_produs
     }
     return render(request, 'produs_detalii.html', context)
+
+def cauta_produs(request):
+    query = request.GET.get('q', '')
+    produse = Produs.objects.filter(nume__icontains = query)
+    context = {
+        'produse':produse,
+        'query': query
+    }
+    return render(request, 'cauta_produs.html', context)

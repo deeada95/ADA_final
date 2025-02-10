@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 from accounts.forms import SignUpForm
+from accounts.models import UserPostRelation
 
 
 # Create your views here.
@@ -28,4 +29,13 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
+
+@login_required
+def favourites_view(request):
+    posts = UserPostRelation.objects.filter(user=request.user)
+    return render(
+        request,
+        'favorites_list.html',
+        context={'posts': posts}
+    )
 

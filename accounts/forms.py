@@ -1,7 +1,8 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm
 from django.db.transaction import atomic
 from accounts.models import Profil
+
 
 
 class SignUpForm(UserCreationForm):
@@ -27,3 +28,4 @@ def save(self, commit=True):
 
 
     return user
+

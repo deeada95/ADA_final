@@ -16,4 +16,4 @@ class Profil(models.Model):
 class UserPostRelation(models.Model):
     user = ForeignKey(User, on_delete=CASCADE)
     def __str__(self):
-        return self.user.username + ' - '
+        return self.user.username

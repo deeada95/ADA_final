@@ -1,8 +1,10 @@
+from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, TemplateView
-
 from .forms import FilterProductsForm
-from .models import Produs
+from .models import Produs, Favorite
+
 
 def index(request):
     return render(request, 'home.html')
@@ -11,7 +13,7 @@ class ProduseView(ListView):
     model = Produs
     template_name = 'produse.html'
     context_object_name = 'produse'
-    paginate_by = 5
+
     def get_queryset(self):
         categorie_filtru = self.request.GET.get('categorie')
         queryset = Produs.objects.all()
@@ -48,3 +50,19 @@ def cauta_produs(request):
         'query': query
     }
     return render(request, 'cauta_produs.html', context)
+
+@login_required
+def add_to_favorites(request, product_id):
+    product = get_object_or_404(Produs, id=product_id)
+    favorite, created = Favorite.objects.get_or_create(user=request.user, product=product)
+
+    if not created:
+        favorite.delete()
+        return JsonResponse({"message": "Produs eliminat din favorite", "status": "removed"})
+
+    return JsonResponse({"message": "Produs adăugat la favorite", "status": "added"})
+
+@login_required
+def favorites_list(request):
+    favorites = Favorite.objects.filter(user=request.user)
+    return render(request, "favorites_list.html", {"favorites": favorites})

@@ -1,6 +1,5 @@
+from django.contrib.auth.models import User
 from django.db import models
-from django.db.models import CASCADE
-
 
 # Create your models here.
 
@@ -23,9 +22,17 @@ class Produs(models.Model):
     def __str__(self):
         return self.nume
 class ImaginiProdus(models.Model):
-    produs = models.ForeignKey(Produs, related_name='imagini', on_delete=CASCADE)
-    imagine = models.ImageField(upload_to='produse_imagini', null=False, default ='media/produse_imagini_suplimentare')
+    produs = models.ForeignKey(Produs, related_name='imagini', on_delete=models.CASCADE)
+    imagine = models.ImageField(upload_to='produse_imagini')
     def __str__(self):
         return self.produs.nume
 
+class Favorite(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Produs, on_delete=models.CASCADE)
 
+    class Meta:
+        unique_together = ('user', 'product')
+
+    def __str__(self):
+        return f"{self.user.username} - {self.product.nume}"

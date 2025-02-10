@@ -22,7 +22,7 @@ from django.urls import path
 from django.views.generic import TemplateView
 from accounts.views import CustomLoginView, CustomPasswordChangeView, SignUpView
 from produs import views
-from produs.views import index, ProduseView
+from produs.views import index, ProduseView, add_to_favorites, favorites_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -36,6 +36,8 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
     path('schimbare_parola', CustomPasswordChangeView.as_view(), name='schimbare_parola'),
     path('signup/', SignUpView.as_view(), name='signup'),
+    path('favorite/<int:product_id>/', add_to_favorites, name='add_to_favorites'),
+    path('favorites_list/', favorites_list, name='favorites_list'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:

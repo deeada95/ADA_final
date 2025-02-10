@@ -3,11 +3,7 @@ body {
 }
 
 .product-images {
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.slick-slide img {
     width: 100%;
-    height: auto;
+    max-width: 300px;
+
 }

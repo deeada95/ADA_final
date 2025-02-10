@@ -1,6 +1,7 @@
 from django import forms
 from produs.models import Category
 
+
 class FilterProductsForm(forms.Form):
     categorie = forms.ModelChoiceField(
         queryset=Category.objects.all(),

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Produse Favorite</h2>
+<ul>
+    {% for favorite in favorites %}
+        <li>
+            <img src="{{ favorite.product.imagine.url }}" width="50" height="50" alt="{{ favorite.product.nume }}">
+            {{ favorite.product.nume }} - {{ favorite.product.pret }} RON
+        </li>
+    {% empty %}
+        <p>Nu ai produse favorite.</p>
+    {% endfor %}
+</ul>
+{% endblock %}

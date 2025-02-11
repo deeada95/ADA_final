@@ -1,5 +1,5 @@
 body {
-    background-color: #392F5A;
+    background-color: black;
 }
 
 .product-images {
@@ -7,3 +7,8 @@ body {
     max-width: 300px;
 
 }
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        }

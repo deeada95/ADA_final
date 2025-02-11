@@ -1,5 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block content %}
-<h1> Bine ai venit pe site!</h1>
-<p> PharmaCare - Farmacia sufletului tau! </p>
+
+<div class="video-container">
+    <video width="4000" height="500" autoplay >
+            <source src="{% static 'video/PharmaCare video.mp4' %}" >
+    </video>
+</div>
+
+
 {% endblock %}

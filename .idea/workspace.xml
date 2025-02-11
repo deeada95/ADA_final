@@ -4,26 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49651a0b-0090-4921-a5b9-6d69c4a40027" name="Changes" comment="adaugare produse">
+    <list default="true" id="49651a0b-0090-4921-a5b9-6d69c4a40027" name="Changes" comment="adaugare pagina produse favorite si buton de favorite">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/farmacie_online/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/farmacie_online/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/farmacie_online/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/farmacie_online/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/produs/static/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/produs/static/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/produs/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/templates/cauta_produs.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/cauta_produs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/templates/despre_noi.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/despre_noi.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/produs/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/templates/produs_detalii.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/produs_detalii.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/templates/produse.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/produse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/templates/program_contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/program_contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,15 +49,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/AND/Desktop/final-template-master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/AND/Desktop/ADA_final/produs/static/imagini",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AND\Desktop\ADA_final\produs\static\imagini" />
+      <recent name="C:\Users\AND\Desktop\ADA_final\produs\static\video" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -255,7 +248,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738874418390</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="adaugare pagina produse favorite si buton de favorite">
+      <option name="closed" value="true" />
+      <created>1739215220603</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1739215220603</updated>
+    </task>
+    <task id="LOCAL-00023" summary="adaugare pagina produse favorite si buton de favorite">
+      <option name="closed" value="true" />
+      <created>1739215225836</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1739215225836</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -267,6 +276,7 @@
     <MESSAGE value="adaugare bara de cautare produs" />
     <MESSAGE value="adaugare bara de filtrare produse" />
     <MESSAGE value="adaugare produse" />
-    <option name="LAST_COMMIT_MESSAGE" value="adaugare produse" />
+    <MESSAGE value="adaugare pagina produse favorite si buton de favorite" />
+    <option name="LAST_COMMIT_MESSAGE" value="adaugare pagina produse favorite si buton de favorite" />
   </component>
 </project>

@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49651a0b-0090-4921-a5b9-6d69c4a40027" name="Changes" comment="stilizare pagini html">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/produs/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="49651a0b-0090-4921-a5b9-6d69c4a40027" name="Changes" comment="stilizare pagini html" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -298,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739391164137</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="stilizare pagini html">
+      <option name="closed" value="true" />
+      <created>1739392957138</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1739392957138</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

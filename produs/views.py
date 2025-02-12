@@ -3,7 +3,7 @@ from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, TemplateView
 from .forms import FilterProductsForm, ContactForm
-from .models import Produs, Favorite
+from .models import Produs, Favorite, ContactMessage
 
 
 def index(request):
@@ -34,11 +34,17 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['name']
+            nume = form.cleaned_data['nume']
             email = form.cleaned_data['email']
-            message = form.cleaned_data['message']
+            mesaj = form.cleaned_data['mesaj']
 
-            return render(request, 'contact_succes.html', {'name': name})
+
+            contact_message = ContactMessage(nume=nume, email=email, mesaj=mesaj)
+            contact_message.save()
+
+            return render(request, 'contact_succes.html', {'name': nume})
+        else:
+            print(form.errors)
     else:
         form = ContactForm()
 

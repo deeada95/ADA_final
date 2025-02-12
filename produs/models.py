@@ -36,3 +36,12 @@ class Favorite(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.product.nume}"
+
+class ContactMessage(models.Model):
+    nume = models.CharField(max_length=100)
+    email = models.EmailField()
+    mesaj = models.TextField()
+
+
+    def __str__(self):
+        return f"Mesaj de la {self.nume} - {self.email}"

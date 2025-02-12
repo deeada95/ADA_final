@@ -11,7 +11,7 @@ class FilterProductsForm(forms.Form):
     )
 
 class ContactForm(forms.Form):
-    name = forms.CharField(label="Numele tău", max_length=100)
+    nume = forms.CharField(label="Numele tău", max_length=100)
     email = forms.EmailField(label="Email-ul tău")
-    message = forms.CharField(label="Mesajul tău", widget=forms.Textarea)
+    mesaj = forms.CharField(label="Mesajul tău", widget=forms.Textarea)
 

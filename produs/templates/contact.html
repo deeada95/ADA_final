@@ -7,24 +7,39 @@
   <p>Email: contact@pharmacare.com</p>
 
   <h3>Trimite-ne un mesaj:</h3>
-  <form method="post" class="mt-3">
+
+  <form method="post">
     {% csrf_token %}
-    <div class="mb-3">
-      <label for="name" class="form-label">Numele tău</label>
-      <input type="text" class="form-control" id="name" name="name" required>
+    <div class="form-group">
+        <label for="id_nume">Numele tău</label>
+        {{ form.nume }}
+        {% if form.nume.errors %}
+            <ul class="errorlist">
+                {% for error in form.nume.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     </div>
 
-    <div class="mb-3">
-      <label for="email" class="form-label">Email-ul tău</label>
-      <input type="email" class="form-control" id="email" name="email" required>
+    <div class="form-group">
+        <label for="id_email">Email-ul tău</label>
+        {{ form.email }}
     </div>
 
-    <div class="mb-3">
-      <label for="message" class="form-label">Mesajul tău</label>
-      <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+    <div class="form-group">
+        <label for="id_mesaj">Mesajul tău</label>
+        {{ form.mesaj }}
+        {% if form.mesaj.errors %}
+            <ul class="errorlist">
+                {% for error in form.mesaj.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     </div>
 
-    <button type="submit" class="btn btn-success w-100">Trimite mesaj</button>
-  </form>
+    <button type="submit" class="btn btn-success">Trimite mesajul</button>
+</form>
 
 {% endblock %}

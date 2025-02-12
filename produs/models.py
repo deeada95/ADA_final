@@ -14,7 +14,7 @@ class Category(models.Model):
 
 class Produs(models.Model):
     nume = models.CharField(max_length=100)
-    descriere = models.TextField()
+    descriere = models.TextField(blank=True, null=True)
     pret = models.DecimalField(max_digits=6, decimal_places=2)
     imagine = models.ImageField(upload_to='produse/', blank = True, null= True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="produse",default=1)

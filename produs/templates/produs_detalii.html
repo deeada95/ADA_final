@@ -21,37 +21,22 @@
                 <p>Nu sunt imagini suplimentare pentru acest produs.</p>
             {% endif %}
         </div>
+        {% if not favorite %}
 
-        <button id="favorite-btn" data-product-id="{{ produs.id }}">
-            🤍 Adaugă la favorite
-        </button>
+            <button id="favorite-btn" data-product-id="{{ produs.id }}">
+                🤍 Adaugă la favorite
+            </button>
 
-        <p><a href="/produse/">Înapoi la produse</a></p>
+        {% else %}
+            <button id="favorite-btn" data-product-id="{{ produs.id }}">
+                ❤️ In favorite
+            </button>
+        {% endif %}
+            <p><a href="/produse/">Înapoi la produse</a></p>
 
     </div>
 
 
-<script>
-    document.getElementById("favorite-btn").addEventListener("click", function () {
-        let productId = this.getAttribute("data-product-id");
-        let button = this;
-
-        fetch(`/favorite/${productId}/`, {
-            method: "GET",
-            headers: { "X-Requested-With": "XMLHttpRequest" }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === "added") {
-                button.textContent = "❤️ În favorite";
-                button.classList.add("favorited");
-            } else {
-                button.textContent = "🤍 Adaugă la favorite";
-                button.classList.remove("favorited");
-            }
-        })
-    });
-</script>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

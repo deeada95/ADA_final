@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <h2>Produse Favorite</h2>
 <ul>
     {% for favorite in favorites %}
         <li>
-            <img src="{{ favorite.product.imagine.url }}" width="50" height="50" alt="{{ favorite.product.nume }}">
+            {% if favorite.product.imagine %}
+                <img src="{{ favorite.product.imagine.url }}" width="50" height="50" alt="{{ favorite.product.nume }}">
+            {% else %}
+                <img src="{% static 'images/default_product.jpg' %}" width="50" height="50" alt="Imagine indisponibilă">
+            {% endif %}
+
             {{ favorite.product.nume }} - {{ favorite.product.pret }} RON
         </li>
     {% empty %}

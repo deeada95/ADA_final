@@ -1,12 +1,56 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Creeaza cont nou</h1>
-<form method="post">
-  {% csrf_token %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-header text-center bg-success text-white">
+          <h2>Creează cont nou</h2>
+        </div>
+        <div class="card-body">
+          <form method="post">
+            {% csrf_token %}
 
-  {{ form }}
+            <div class="form-group">
+              <label for="id_username">Username</label>
+              {{ form.username }}
+              <small class="form-text text-muted">Alege un nume de utilizator unic.</small>
+            </div>
 
-  <input type="submit" value="Create" class="btn btn-primary" >
-</form>
+            <div class="form-group">
+              <label for="id_password1">Parola</label>
+              {{ form.password1 }}
+              <small class="form-text text-muted">Parola trebuie să aibă cel puțin 8 caractere și să nu fie prea ușor de ghicit.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="id_password2">Confirmă parola</label>
+              {{ form.password2 }}
+            </div>
+
+            <div class="form-group">
+              <label for="id_email">Email</label>
+              {{ form.email }}
+            </div>
+
+            <div class="form-group">
+              <label for="id_phone">Telefon</label>
+              {{ form.telefon }}
+            </div>
+
+            <div class="form-group">
+              <label for="id_birthdate">Data nașterii</label>
+              {{ form.data_nasterii }}
+            </div>
+
+            <div class="text-center">
+              <input type="submit" value="Creează cont" class="btn btn-success btn-lg mt-3">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

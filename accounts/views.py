@@ -3,7 +3,7 @@ from django.contrib.auth.views import LoginView, PasswordChangeView
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
-from accounts.forms import SignUpForm
+from accounts.forms import SignUpForm, CustomPasswordChangeForm
 from accounts.models import UserPostRelation
 
 
@@ -12,7 +12,6 @@ class CustomLoginView(LoginView):
     template_name = 'login.html'
 class CustomPasswordChangeView(PasswordChangeView):
     template_name = 'schimbare_parola.html'
-    form_class = SignUpForm
     success_url = reverse_lazy('home')
 
 class SignUpView(CreateView):
@@ -38,4 +37,3 @@ def favourites_view(request):
         'favorites_list.html',
         context={'posts': posts}
     )
-

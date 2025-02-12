@@ -1,9 +1,7 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
 from django.db.transaction import atomic
 from accounts.models import Profil
-
-
 
 class SignUpForm(UserCreationForm):
     email = forms.EmailField(required=True)
@@ -13,6 +11,9 @@ class SignUpForm(UserCreationForm):
 class Meta(UserCreationForm.Meta):
         fields = ['username', 'email', 'telefon', 'data_nasterii','password1','password2']
 
+class CustomPasswordChangeForm(PasswordChangeForm):
+    def __init__(self, user, *args, **kwargs):
+        super().__init__(user, *args, **kwargs)
 @atomic
 def save(self, commit=True):
     user = super().save(commit=False)
@@ -28,4 +29,3 @@ def save(self, commit=True):
 
 
     return user
-

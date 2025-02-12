@@ -1,12 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Login</h1>
-<form method="post">
-  {% csrf_token %}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card shadow-lg p-4" style="width: 400px;">
+        <h2 class="text-center text-success">Autentificare</h2> <!-- Textul este acum verde -->
+        <form method="post" class="mt-3">
+            {% csrf_token %}
 
-  {{ form }}
+            <div class="mb-3">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+            </div>
 
-  <input type="submit" value="Login" class="btn btn-primary" >
-</form>
+            <div class="mb-3">
+                {{ form.password.label_tag }}
+                {{ form.password }}
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">Autentificare</button> <!-- Butonul este acum verde -->
+        </form>
+        <p class="text-center mt-3">
+        </p>
+    </div>
+</div>
 {% endblock %}

@@ -30,14 +30,17 @@ urlpatterns = [
     path('produse/', ProduseView.as_view(), name='produse'),
     path('produs/<int:produs_id>/', views.produs_detalii, name='produs_detalii'),
     path('despre noi/', TemplateView.as_view(template_name='despre_noi.html'), name='despre_noi'),
-    path('program-contact/', TemplateView.as_view(template_name='program_contact.html'), name='program_contact'),
+    path('contact/', views.contact, name='contact'),
+    path('contact/success/', TemplateView.as_view(template_name='contact_success.html'), name='contact_success'),
     path('cauta_produs/', views.cauta_produs, name='cauta_produs'),
     path('login/', CustomLoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
-    path('schimbare_parola', CustomPasswordChangeView.as_view(), name='schimbare_parola'),
+    path('schimbare_parola/', CustomPasswordChangeView.as_view(), name='schimbare_parola'),
     path('signup/', SignUpView.as_view(), name='signup'),
     path('favorite/<int:product_id>/', add_to_favorites, name='add_to_favorites'),
     path('favorites_list/', favorites_list, name='favorites_list'),
+
+
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:

@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, TemplateView
-from .forms import FilterProductsForm
+from .forms import FilterProductsForm, ContactForm
 from .models import Produs, Favorite
 
 
@@ -30,15 +30,27 @@ class ProduseView(ListView):
 class DespreNoi(TemplateView):
     template_name = 'despre_noi.html'
 
-class Program(TemplateView):
-    template_name = 'program_contact.html'
+def contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
 
+            return render(request, 'contact_succes.html', {'name': name})
+    else:
+        form = ContactForm()
+
+    return render(request, 'contact.html', {'form': form})
 def produs_detalii(request, produs_id):
     produs = get_object_or_404(Produs, id=produs_id)
     imagini_produs = produs.imagini.all()
+    favorite = Favorite.objects.filter(product= produs).filter(user=request.user)
     context = {
         'produs': produs,
-        'imagini_produs': imagini_produs
+        'imagini_produs': imagini_produs,
+        'favorite': favorite
     }
     return render(request, 'produs_detalii.html', context)
 

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h3>Detalii de contact:</h3>
+  <p>Adresă: <a href="https://www.google.com/maps?q=Strada+Biruintei,Numar+77,+Popesti-Leordeni,+Romania" target="_blank">Strada Biruintei, nr.77, Popesti-Leordeni, Romania</a></p>  </p>
+  <p>Telefon: +40 123 456 789</p>
+  <p>Email: contact@pharmacare.com</p>
+
+  <h3>Trimite-ne un mesaj:</h3>
+  <form method="post" class="mt-3">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="name" class="form-label">Numele tău</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email-ul tău</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="message" class="form-label">Mesajul tău</label>
+      <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">Trimite mesaj</button>
+  </form>
+
+{% endblock %}

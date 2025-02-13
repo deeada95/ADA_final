@@ -1,10 +1,11 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView, PasswordChangeView
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
-from accounts.forms import SignUpForm, CustomPasswordChangeForm
+from accounts.forms import SignUpForm
 from accounts.models import UserPostRelation
+from produs.models import Comanda, ComandaFinala
 
 
 # Create your views here.
@@ -37,3 +38,13 @@ def favourites_view(request):
         'favorites_list.html',
         context={'posts': posts}
     )
+def vizualizare_comanda(request):
+    comenzi = Comanda.objects.filter(user=request.user)
+    return render(request, 'vizualizare_comenzi.html', {'comenzi': comenzi})
+
+@login_required
+def detalii_comanda(request, comanda_id):
+    comanda = get_object_or_404(Comanda, id=comanda_id, user=request.user)
+    comanda_finala = ComandaFinala.objects.filter(comanda=comanda)
+
+    return render(request, 'detalii_comanda.html', {'comanda': comanda, 'comanda_finala': comanda_finala})

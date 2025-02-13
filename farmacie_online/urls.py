@@ -20,9 +20,11 @@ from django.contrib import admin
 from django.contrib.auth.views import LogoutView
 from django.urls import path
 from django.views.generic import TemplateView
-from accounts.views import CustomLoginView, CustomPasswordChangeView, SignUpView
+from accounts import views
+from accounts.views import CustomLoginView, CustomPasswordChangeView, SignUpView, vizualizare_comanda, detalii_comanda
 from produs import views
-from produs.views import index, ProduseView, add_to_favorites, favorites_list
+from produs.views import index, ProduseView, add_to_favorites, favorites_list, vizualizare_cos, adauga_in_cos, \
+    elimina_din_cos, finalizare_comanda
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -39,6 +41,12 @@ urlpatterns = [
     path('signup/', SignUpView.as_view(), name='signup'),
     path('favorite/<int:product_id>/', add_to_favorites, name='add_to_favorites'),
     path('favorites_list/', favorites_list, name='favorites_list'),
+    path('vizualizare_cos/', vizualizare_cos, name='vizualizare_cos'),
+    path('vizualizare_cos/adauga/<int:produs_id>/', adauga_in_cos, name='adauga_in_cos'),
+    path('vizualizare_cos/elimina/<int:vizualizare_cos_id>/', elimina_din_cos, name='elimina_din_cos'),
+    path('finalizare_comanda/', finalizare_comanda, name='finalizare_comanda'),
+    path('vizualizare_comanda/', vizualizare_comanda, name='vizualizare_comanda'),
+    path('comanda/<int:comanda_id>/', detalii_comanda, name='detalii_comanda'),
 
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -12,3 +12,53 @@ body {
     justify-content: center;
     align-items: center;
         }
+
+.center {
+        text-align: center;
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th {
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+tr {
+    margin-bottom: 10px;
+}
+
+.nav-link i {
+    margin-right: 5px;
+}
+
+.nav-link.text-black {
+    color: black !important;
+}
+
+.nav-item.dropdown .nav-link {
+    color: black;
+}
+
+.nav-link i.fa-shopping-cart,
+.nav-link i.fa-user {
+    color: black;
+}
+
+.nav-link:hover i.fa-shopping-cart,
+.nav-link:hover i.fa-user {
+    color: #555;
+}
+
+

@@ -20,6 +20,16 @@
             {% else %}
                 <p>Nu sunt imagini suplimentare pentru acest produs.</p>
             {% endif %}
+            {% if user.is_authenticated %}
+                {% if in_cos %}
+                    <p>Acest produs este deja în coș.</p>
+                {% else %}
+                    <a href="{% url 'adauga_in_cos' produs.id %}" class="btn">Adaugă în coș</a>
+                {% endif %}
+            {% else %}
+                <p> <a href="{% url 'login' %}?next={{ request.path }}">Adauga in cos</a></p>
+            {% endif %}
+
         </div>
         {% if not favorite %}
 

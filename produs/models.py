@@ -1,5 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.db.models import CASCADE
+
 
 # Create your models here.
 
@@ -45,3 +47,40 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return f"Mesaj de la {self.nume} - {self.email}"
+
+class CosCumparaturi(models.Model):
+    user = models.ForeignKey(User, on_delete=CASCADE)
+    produs = models.ForeignKey(Produs, on_delete=CASCADE)
+    cantitate = models.PositiveIntegerField(default=1)
+
+    class Meta:
+        unique_together = ('user', 'produs')
+
+    def __str__(self):
+        return f"{self.user.username} - {self.produs.nume} (x{self.cantitate})"
+
+class Comanda(models.Model):
+    STATUS_CHOICES = [
+        ('Pending', 'În așteptare'),
+        ('Processing', 'În procesare'),
+        ('Shipped', 'Expediată'),
+        ('Delivered', 'Livrată'),
+        ('Cancelled', 'Anulată'),
+    ]
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    produse = models.ManyToManyField(Produs, through='ComandaFinala')
+    data_creare = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Pending')
+    total = models.DecimalField(max_digits=8, decimal_places=2, default=0.00)
+
+    def __str__(self):
+        return f"Comanda #{self.id} - {self.user.username} - {self.status}"
+
+class ComandaFinala(models.Model):
+    comanda = models.ForeignKey(Comanda, on_delete=models.CASCADE)
+    produs = models.ForeignKey(Produs, on_delete=models.CASCADE)
+    cantitate = models.PositiveIntegerField(default=1)
+    pret_unitar = models.DecimalField(max_digits=6, decimal_places=2)
+
+    def __str__(self):
+        return f"{self.produs.nume} - {self.cantitate}"

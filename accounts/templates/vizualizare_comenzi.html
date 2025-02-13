@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Comenzile tale</h2>
+
+{% if comenzi %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID Comandă</th>
+                <th>Data Comenzii</th>
+                <th>Total</th>
+                <th>Acțiuni</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for comanda in comenzi %}
+                <tr>
+                    <td >{{ comanda.id }}</td>
+                    <td >{{ comanda.data_creare }}</td>
+                    <td >{{ comanda.total }} RON</td>
+                    <td>
+                        <a href="{% url 'detalii_comanda' comanda.id %}">Detalii</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>Nu ai comenzi plasate încă.</p>
+{% endif %}
+
+{% endblock %}

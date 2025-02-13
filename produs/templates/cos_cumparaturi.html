@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Coșul meu</h2>
+
+{% if produse_cos %}
+<table>
+    <tr>
+        <th> </th>
+        <th>Produs</th>
+        <th>Preț</th>
+        <th>Cantitate</th>
+        <th>Acțiuni</th>
+    </tr>
+    {% for item in produse_cos %}
+    <tr>
+
+        <td>
+            {% if item.produs.imagine %}
+                <img src="{{ item.produs.imagine.url }}" alt="{{ item.produs.nume }}" width="100">
+            {% else %}
+                <p>Nu există imagine pentru acest produs</p>
+            {% endif %}
+        </td>
+
+
+        <td>{{ item.produs.nume }}</td>
+
+
+        <td>{{ item.produs.pret }} RON</td>
+
+
+        <td class="center">{{ item.cantitate }}</td>
+
+
+        <td><a href="{% url 'elimina_din_cos' item.id %}">Șterge</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h3>Total: {{ total }} RON</h3>
+<a href="{% url 'finalizare_comanda' %}" class="btn">Finalizează comanda</a>
+
+{% else %}
+<p>Coșul este gol.</p>
+{% endif %}
+{% endblock %}

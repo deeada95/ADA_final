@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Detalii Comandă #{{ comanda.id }}</h2>
+
+<p><strong>Data comenzii:</strong> {{ comanda.data_comanda }}</p>
+<p><strong>Total:</strong> {{ comanda.total }} RON</p>
+
+<h3>Produse comandate:</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Produs</th>
+            <th>Cantitate</th>
+            <th>Preț Unitar</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in comanda_finala %}
+        <tr>
+            <td>{{ item.produs.nume }}</td>
+            <td>{{ item.cantitate }}</td>
+            <td>{{ item.pret_unitar }} RON</td>
+
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">Nu sunt produse în această comandă.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{% url 'vizualizare_comanda' %}" class="btn">Înapoi la comenzile tale</a>
+{% endblock %}

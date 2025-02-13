@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Comanda a fost plasată cu succes!</h2>
+<p>Comanda ta ({{ comanda.id }}) a fost înregistrată și este în curs de procesare.</p>
+<a href="{% url 'vizualizare_cos' %}" class="btn">Înapoi la magazin</a>
+{% endblock %}

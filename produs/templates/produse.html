@@ -2,28 +2,38 @@
 {% block content %}
 
 <div class="filter-form">
-    <form method="get">
+    <form method="get" class="filter-container">
         {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Filtrează</button>
+        <button type="submit" class="btn">🔍 Filtrează</button>
     </form>
 </div>
 
 <div class="product-list">
     {% for produs in produse %}
         <div class="product-item">
-            <h3>{{ produs.nume }}</h3>
-            <p>{{ produs.descriere }}</p>
-            <p>Preț: {{ produs.pret }} RON</p>
-            <p>Categorie: {{ produs.category.name }}</p>
-
             {% if produs.imagine %}
-                <img src="{{ produs.imagine.url }}" alt="{{ produs.nume }}" width="200">
+                <img src="{{ produs.imagine.url }}" alt="{{ produs.nume }}" class="product-image">
             {% else %}
-                <p>Imagine nu este disponibilă</p>
+                <p class="no-image">Imagine indisponibilă</p>
             {% endif %}
-            <a href="{% url 'produs_detalii' produs_id=produs.id %}">Vezi detalii</a>
+
+            <h3 class="product-title">{{ produs.nume }}</h3>
+
+            <p class="product-description" id="desc-{{ produs.id }}">
+                {{ produs.descriere|slice:":100" }}{% if produs.descriere|length > 100 %}...{% endif %}
+            </p>
+
+            <p class="full-description" id="full-desc-{{ produs.id }}" style="display: none;">
+                {{ produs.descriere }}
+            </p>
+
+            <p class="product-price">💰 {{ produs.pret }} RON</p>
+            <p class="product-category">📌 Categorie: <span>{{ produs.category.name }}</span></p>
+
+            <a href="{% url 'produs_detalii' produs_id=produs.id %}" class="btn btn-details">🔎 Vezi detalii</a>
 
         </div>
     {% endfor %}
 </div>
+
 {% endblock %}

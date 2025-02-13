@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="product-detail">
-        <h1>{{ produs.nume }}</h1>
-        <p>{{ produs.descriere }}</p>
-        <p><strong>Preț:</strong> {{ produs.pret }} RON</p>
-        <p><strong>Categorie:</strong> {{ produs.category.name }}</p>
+        <h1 class="product-title">{{ produs.nume }}</h1>
+        <p class="product-description">{{ produs.descriere }}</p>
+        <p><strong>Preț:</strong> <span class="product-price">{{ produs.pret }} RON</span></p>
+        <p><strong>Categorie:</strong> <span class="product-category">{{ produs.category.name }}</span></p>
 
         <div class="product-images">
             {% if imagini_produs %}
                 <div class="image-slider">
                     <div class="slider-wrapper">
                         {% for imagine in imagini_produs %}
-                            <div>
-                                <img src="{{ imagine.imagine.url }}" alt="Imagine suplimentară {{ produs.nume }}" width="300">
+                            <div class="slider-item">
+                                <img src="{{ imagine.imagine.url }}" alt="Imagine suplimentară {{ produs.nume }}" class="slider-image">
                             </div>
                         {% endfor %}
                     </div>
@@ -20,39 +20,38 @@
             {% else %}
                 <p>Nu sunt imagini suplimentare pentru acest produs.</p>
             {% endif %}
+        </div>
+
+        <div class="product-actions">
             {% if user.is_authenticated %}
                 {% if in_cos %}
-                    <p>Acest produs este deja în coș.</p>
+                    <p class="product-in-cart">Acest produs este deja în coș.</p>
                 {% else %}
-                    <a href="{% url 'adauga_in_cos' produs.id %}" class="btn">Adaugă în coș</a>
+                    <a href="{% url 'adauga_in_cos' produs.id %}" class="btn add-to-cart-btn">Adaugă în coș</a>
                 {% endif %}
             {% else %}
-                <p> <a href="{% url 'login' %}?next={{ request.path }}">Adauga in cos</a></p>
+                <p> <a href="{% url 'login' %}?next={{ request.path }}" class="login-link">Adaugă în coș</a></p>
             {% endif %}
-
         </div>
-        {% if not favorite %}
 
-            <button id="favorite-btn" data-product-id="{{ produs.id }}">
-                🤍 Adaugă la favorite
-            </button>
+        <div class="favorite-button-container">
+            {% if not favorite %}
+                <button id="favorite-btn" class="favorite-btn" data-product-id="{{ produs.id }}">
+                    🤍 Adaugă la favorite
+                </button>
+            {% else %}
+                <button id="favorite-btn" class="favorite-btn active" data-product-id="{{ produs.id }}">
+                    ❤️ În favorite
+                </button>
+            {% endif %}
+        </div>
 
-        {% else %}
-            <button id="favorite-btn" data-product-id="{{ produs.id }}">
-                ❤️ In favorite
-            </button>
-        {% endif %}
-            <p><a href="/produse/">Înapoi la produse</a></p>
-
+        <p><a href="/produse/" class="back-link">Înapoi la produse</a></p>
     </div>
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
-
 
 {% endblock %}

@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49651a0b-0090-4921-a5b9-6d69c4a40027" name="Changes" comment="implementare Comanda, Cosul meu, Istoric Comenzi. formular de trimitere mesaj">
+    <list default="true" id="49651a0b-0090-4921-a5b9-6d69c4a40027" name="Changes" comment="stilizare pagini html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/static/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/produs/static/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/farmacie_online.dot" beforeDir="false" afterPath="$PROJECT_DIR$/farmacie_online.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produs/templates/cauta_produs.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/cauta_produs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/produs/templates/produs_detalii.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/produs_detalii.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/produs/templates/produse.html" beforeDir="false" afterPath="$PROJECT_DIR$/produs/templates/produse.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,15 +48,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/AND/Desktop/ADA_final/produs/static/imagini&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.models.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/AND/Desktop/ADA_final/produs/static/imagini",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\AND\Desktop\ADA_final\produs\static\imagini" />
@@ -328,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739475629460</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="stilizare pagini html">
+      <option name="closed" value="true" />
+      <created>1739479094007</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1739479094007</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -342,8 +350,8 @@
     <MESSAGE value="adaugare produse" />
     <MESSAGE value="adaugare pagina produse favorite si buton de favorite" />
     <MESSAGE value="adaugare sigla si video pe pagina de home" />
-    <MESSAGE value="stilizare pagini html" />
     <MESSAGE value="implementare Comanda, Cosul meu, Istoric Comenzi. formular de trimitere mesaj" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementare Comanda, Cosul meu, Istoric Comenzi. formular de trimitere mesaj" />
+    <MESSAGE value="stilizare pagini html" />
+    <option name="LAST_COMMIT_MESSAGE" value="stilizare pagini html" />
   </component>
 </project>
